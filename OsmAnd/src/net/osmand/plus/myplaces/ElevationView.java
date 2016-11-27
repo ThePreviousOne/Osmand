@@ -40,7 +40,7 @@ public class ElevationView extends ImageView {
 
 		//TODO: Hardy: Perhaps also support feet in graph
 		String unit = (mc == MetricsConstants.MILES_AND_FEET) ? app.getString(R.string.foot) : app.getString(R.string.m);
-		int stepBase = (mc == MetricsConstants.MILES_AND_FEET) ? app.getString(R.string.foot) : app.getString(R.string.m);
+		int stepBase = (mc == MetricsConstants.MILES_AND_FEET) ? 200 : 100;
 		float convEle = (mc == MetricsConstants.MILES_AND_FEET) ? 3.28084f : 1.0f;
 
 		final int maxBase = ((int)(maxElevation / stepBase) + 1) * stepBase, minBase = (int)(minElevation / stepBase) * stepBase;
